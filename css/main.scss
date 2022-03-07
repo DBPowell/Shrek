@@ -1,0 +1,123 @@
+@import url('http://fonts.cdnfonts.com/css/jlr-star-shrek');
+
+body {
+    font-family: 'shrek',arial;
+    margin: 0em;
+   background-color: rgb(34, 51, 34);
+   a {
+       all: unset;
+       
+   }
+
+   a:hover {
+       cursor: pointer;
+   }
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/swamp.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.wrapper {
+    text-align: center;
+    padding: 25em;
+    margin: auto;
+    a {
+        animation: takeMe 1s alternate-reverse infinite;
+        text-decoration: none;
+        color: white;
+        
+    }
+
+
+    a:hover {
+        transition-timing-function: ease-out;
+        transition: .5s;
+        font-size: larger;
+        animation: none;
+    }
+}
+
+.shrek-bg { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/shrekpic.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.back {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 3em;
+    padding-top: 3em;
+
+    a:hover {
+        color: rgb(0, 61, 0);
+        font-weight: bold;
+    }
+}
+.down {  
+    margin: 25em 0 0 60em;
+    animation: floater 4s ease-in-out infinite;
+
+}
+
+.main-text {
+    text-align: center;
+    margin: 30em 0 0 0;
+    color: green;
+}
+
+.shrek-gifs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    img {
+        height: 400px;
+        width: 450px;
+        margin: 5em 0 0 0;
+    }
+}
+
+.blink {
+    display: block;
+    background-color: white;
+}
+
+
+
+
+@keyframes takeMe {
+    from {
+        clip-path: circle(0.4% at 50% 50%);
+    }
+
+    to {
+        clip-path: circle(74.6% at 51% 50%);
+    }
+}
+
+@keyframes floater {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
